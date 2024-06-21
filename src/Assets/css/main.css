@@ -40,6 +40,7 @@ body {
   font-size: 66.67% !important;
   font-family: "poppins-light";
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 html::-moz-selection, body::-moz-selection {
   background-color: black;
@@ -92,15 +93,15 @@ header .h-block-two ul li:after {
   display: block;
   height: 0.1rem;
   width: 0;
-  background-color: #0094D9;
+  background-color: #0094d9;
   transition: all 0.3s linear;
 }
 header .h-block-two ul li:hover {
-  color: #0094D9;
+  color: #0094d9;
 }
 header .h-block-two ul li:hover:after {
   width: 100%;
-  background-color: #0094D9;
+  background-color: #0094d9;
 }
 
 .about-us-section {
@@ -210,22 +211,35 @@ header .h-block-two ul li:hover:after {
 .our-websites-section .our-websites-wrap {
   display: flex;
   align-items: center;
+  gap: 2rem;
 }
 .our-websites-section .our-websites-wrap .bullrider {
   padding: 1rem;
-  background-image: url("../img/bullriderlogo.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   margin: 3rem 0;
   height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   transform: translateX(-100%);
   transition: transform 1s ease;
   opacity: 0;
+}
+.our-websites-section .our-websites-wrap .bullrider::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/bullriderlogo.png"); /* Replace with your image path */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 100%;
+  filter: blur(0);
+  transition: all 1s ease;
 }
 .our-websites-section .our-websites-wrap .bullrider.visible {
   transform: translateX(0);
@@ -233,9 +247,12 @@ header .h-block-two ul li:hover:after {
 }
 .our-websites-section .our-websites-wrap .bullrider .bullrider-desc {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 1s ease;
+  opacity: 0;
 }
 .our-websites-section .our-websites-wrap .bullrider .bullrider-desc h2 {
   font-size: 4rem;
@@ -246,21 +263,54 @@ header .h-block-two ul li:hover:after {
   font-size: 2rem;
   text-align: center;
 }
+.our-websites-section .our-websites-wrap .bullrider .bullrider-desc a {
+  padding: 0 3rem;
+  font-size: 2rem;
+  color: black;
+  border: 2px solid black;
+  border-radius: 2rem;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.our-websites-section .our-websites-wrap .bullrider .bullrider-desc a:hover {
+  color: white;
+  background-color: black;
+}
+.our-websites-section .our-websites-wrap .bullrider:hover::before {
+  filter: blur(10px);
+}
+.our-websites-section .our-websites-wrap .bullrider:hover .bullrider-desc {
+  opacity: 1;
+  filter: none;
+  z-index: 99;
+}
 .our-websites-section .our-websites-wrap .ag {
   padding: 1rem;
-  background-image: url("../img/bullriderlogo.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   margin: 3rem 0;
   height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   transform: translateX(100%);
   transition: transform 1s ease;
   opacity: 0;
+}
+.our-websites-section .our-websites-wrap .ag::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/bullriderlogo.png"); /* Replace with your image path */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 100%;
+  filter: blur(0);
+  transition: all 1s ease;
 }
 .our-websites-section .our-websites-wrap .ag.visible {
   transform: translateX(0);
@@ -268,16 +318,59 @@ header .h-block-two ul li:hover:after {
 }
 .our-websites-section .our-websites-wrap .ag .ag-desc {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 1s ease;
+  opacity: 0;
 }
 .our-websites-section .our-websites-wrap .ag .ag-desc h2 {
   font-size: 4rem;
   text-align: center;
 }
 .our-websites-section .our-websites-wrap .ag .ag-desc p {
-  text-align: center;
   padding: 1rem;
   font-size: 2rem;
+  text-align: center;
+}
+.our-websites-section .our-websites-wrap .ag .ag-desc a {
+  padding: 0 3rem;
+  font-size: 2rem;
+  color: black;
+  border: 2px solid black;
+  border-radius: 2rem;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.our-websites-section .our-websites-wrap .ag .ag-desc a:hover {
+  color: white;
+  background-color: black;
+}
+.our-websites-section .our-websites-wrap .ag:hover::before {
+  filter: blur(10px);
+}
+.our-websites-section .our-websites-wrap .ag:hover .ag-desc {
+  opacity: 1;
+  filter: none;
+  z-index: 99;
+}
+
+.home-blogs-section {
+  padding-top: 2rem;
+}
+.home-blogs-section .section-title {
+  text-align: center;
+  font-size: 6rem;
+  border-bottom: 1px solid black;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+}
+.home-blogs-section .section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.home-blogs-section .home-blogs {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

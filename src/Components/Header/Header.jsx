@@ -5,12 +5,12 @@ import Logo from "../../Assets/img/rank-nobg.png";
 function Header() {
   return (
     <header>
-      <div class="h-block-one">
+      <div className="h-block-one">
         <Link href="/">
           <Image src={Logo} alt="RANK-LEATHER" height={500} width={500} />
         </Link>
       </div>
-      <div class="h-block-two">
+      <div className="h-block-two">
         <ul>
           <li>BLOGS</li>
           <li>CATALOGUE</li>

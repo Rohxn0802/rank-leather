@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
 
@@ -11,29 +11,19 @@ function OurWebsites() {
     const handleScroll = () => {
       const titlePosition =
         titleRef.current.getBoundingClientRect().top + window.scrollY;
-      
-      // Check if the top of the title is visible in the viewport
-      if (window.scrollY + window.innerHeight >= titlePosition ||
-          window.scrollY >= titlePosition) {
+
+      if (
+        window.scrollY + window.innerHeight >= titlePosition ||
+        window.scrollY >= titlePosition
+      ) {
         titleRef.current.classList.add("visible");
+        bullriderRef.current.classList.add("visible");
+        agRef.current.classList.add("visible");
         window.removeEventListener("scroll", handleScroll);
-      }
-      
-      // Check if bullrider element is visible
-      if (bullriderRef.current) {
-        const bullriderPosition = bullriderRef.current.getBoundingClientRect().top + window.scrollY;
-        if (window.scrollY + window.innerHeight >= bullriderPosition) {
-          bullriderRef.current.classList.add("visible");
-        }
+
       }
 
-      // Check if ag element is visible
-      if (agRef.current) {
-        const agPosition = agRef.current.getBoundingClientRect().top + window.scrollY;
-        if (window.scrollY + window.innerHeight >= agPosition) {
-          agRef.current.classList.add("visible");
-        }
-      }
+    
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -57,7 +47,7 @@ function OurWebsites() {
               consequuntur doloribus temporibus nostrum facilis itaque sint sit
               corporis obcaecati quo sed.
             </p>
-            <Link href="https://www.bullriderindia.in">Visit</Link>
+            <Link href="https://www.bullriderindia.in">VISIT NOW</Link>
           </div>
         </div>
         <div ref={agRef} className="ag">
@@ -69,7 +59,7 @@ function OurWebsites() {
               expedita saepe, deserunt corrupti neque dolorum eos, ad accusamus
               praesentium! Ex non corporis explicabo.
             </p>
-            <Link href="/">Visit</Link>
+            <Link href="/">VISIT NOW</Link>
           </div>
         </div>
       </div>

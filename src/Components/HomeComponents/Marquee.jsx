@@ -1,7 +1,7 @@
 function Marquee() {
   return (
     <section>
-      <div class="home-marquee">
+      <div className="home-marquee">
         <ul>
           <li> img </li>
           <li> img </li>
