@@ -6,6 +6,10 @@
   font-family: "poppins-light";
   src: url(../fonts/Poppins-Light.ttf);
 }
+@font-face {
+  font-family: "bebas-nue";
+  src: url(../fonts/BebasNeue-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +41,7 @@ input {
 
 html,
 body {
-  font-size: 66.67% !important;
+  font-size: 62.4% !important;
   font-family: "poppins-light";
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -102,6 +106,104 @@ header .h-block-two ul li:hover {
 header .h-block-two ul li:hover:after {
   width: 100%;
   background-color: #0094d9;
+}
+
+footer {
+  margin-top: 2rem;
+  background-color: black;
+  padding-top: 4rem;
+  position: relative;
+  padding-bottom: 5rem;
+}
+footer .footer-line {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  border: 1px solid transparent;
+  transition: all 1.5s ease;
+}
+footer .footer-line.visible {
+  width: 100%;
+  left: 0;
+  border-color: white;
+}
+footer .footer-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2rem;
+  padding-top: 2rem;
+}
+footer .footer-flex .footer-img .footer-logo {
+  text-align: center;
+}
+footer .footer-flex .footer-img .footer-logo img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 10rem;
+}
+footer .footer-flex .footer-img .footer-tagline {
+  font-size: 2.2rem;
+  color: white;
+  font-family: "bebas-nue";
+}
+footer .footer-flex .footer-info {
+  width: 30rem;
+}
+footer .footer-flex .footer-info .footer-address {
+  font-size: 1.4rem;
+  color: white;
+  padding-bottom: 1rem;
+}
+footer .footer-flex .footer-info .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+footer .footer-flex .footer-info .social-icons a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+footer .footer-flex .footer-info .social-icons a svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: black;
+  transition: all 0.5s ease;
+}
+footer .footer-flex .footer-info .social-icons a:hover.whatsapp-logo {
+  background-color: #34af23;
+}
+footer .footer-flex .footer-info .social-icons a:hover.whatsapp-logo svg {
+  fill: white;
+}
+footer .footer-flex .footer-info .social-icons a:hover.facebook-logo {
+  background-color: #4267b2;
+}
+footer .footer-flex .footer-info .social-icons a:hover.facebook-logo svg {
+  fill: white;
+}
+footer .footer-flex .footer-info .social-icons a:hover.instagram-logo {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+footer .footer-flex .footer-info .social-icons a:hover.instagram-logo svg {
+  fill: white;
+}
+footer .footer-flex .footer-info .social-icons a:hover.email-logo {
+  background-color: red;
+}
+footer .footer-flex .footer-info .social-icons a:hover.email-logo svg {
+  fill: white;
+}
+footer .footer-flex .footer-info .copyright {
+  font-size: 1.4rem;
+  color: white;
+  padding-top: 1rem;
 }
 
 .about-us-section {
@@ -373,4 +475,88 @@ header .h-block-two ul li:hover:after {
 }
 .home-blogs-section .home-blogs {
   display: flex;
+  flex-wrap: wrap;
+}
+.home-blogs-section .home-blogs .blog-card {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+}
+.home-blogs-section .home-blogs .blog-card.visible {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+.home-blogs-section .home-blogs .blog-card .blog-image {
+  background-image: url("../img/trending1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 250px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.home-blogs-section .home-blogs .blog-card .blog-image button {
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background: transparent;
+  color: white;
+}
+.home-blogs-section .home-blogs .blog-card .blog-image button:hover {
+  background-color: white;
+  color: black;
+}
+.home-blogs-section .home-blogs .blog-card .blog-image:hover {
+  transform: scale(1.1);
+}
+.home-blogs-section .home-blogs .blog-card .blog-image:hover button {
+  opacity: 1;
+}
+.home-blogs-section .home-blogs .blog-card h3 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+}
+.home-blogs-section .blogs-redirect {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+}
+.home-blogs-section .blogs-redirect.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.home-blogs-section .blogs-redirect a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home-blogs-section .blogs-redirect a::after {
+  display: block;
+  content: "";
+  height: 1px;
+  background-color: black;
+  width: 0;
+  transition: all 0.3s ease;
+}
+.home-blogs-section .blogs-redirect a:hover::after {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

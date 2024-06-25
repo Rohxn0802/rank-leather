@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import Link from "next/link";
-import {useRef, useEffect} from "react";
+import { useRef, useEffect } from "react";
 
 function Blogs() {
   const titleRef = useRef(null);
-  
+  const blogCard = useRef(null);
+  const viewMore = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +17,11 @@ function Blogs() {
         window.scrollY >= titlePosition
       ) {
         titleRef.current.classList.add("visible");
-        
+        blogCard.current.classList.add("visible");
+        viewMore.current.classList.add("visible");
+
         window.removeEventListener("scroll", handleScroll);
-
       }
-
-    
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,16 +30,19 @@ function Blogs() {
     };
   }, []);
   return (
-    <section class="home-blogs-section">
-      <h2 ref={titleRef} class="section-title">Insights & Stories</h2>
+    <section className="home-blogs-section">
+      <h2 ref={titleRef} className="section-title">
+        Insights & Stories
+      </h2>
       <div className="home-blogs">
-        <div className="blog-card">
+        <div ref={blogCard} className="blog-card">
+          <div className="blog-image">
+            <button>Read More</button>
+          </div>
           <h3>Title</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, deserunt.</p>
-          <button>Read More</button>
         </div>
       </div>
-      <div className="blogs-redirect">
+      <div ref={viewMore} className="blogs-redirect">
         <Link href="/blogs">View More</Link>
       </div>
     </section>
