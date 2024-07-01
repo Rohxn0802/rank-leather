@@ -1,49 +1,40 @@
-"use client"
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
+import SectionTitle from "../Common/SectionTitle";
+import ViewMore from "../Common/ViewMore";
+import CatalogueCard from "./CatalogueCard";
+import cc1 from "../../Assets/img/catalogue/wallet1.jpg";
+import cc2 from "../../Assets/img/catalogue/db2.png";
+import cc3 from "../../Assets/img/catalogue/belt2.png";
+import cc4 from "../../Assets/img/catalogue/backpack2.png";
+import cc5 from "../../Assets/img/catalogue/gs5.png";
+import cc6 from "../../Assets/img/catalogue/officeBag3.png";
+import cc7 from "../../Assets/img/catalogue/folder1.png";
+import cc8 from "../../Assets/img/catalogue/tb4.png";
+import cc9 from "../../Assets/img/catalogue/lb2.png";
 
 function Catalogue() {
-  const titleRef = useRef(null);
-  const catalogueCard = useRef(null);
-  const viewMore = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const titlePosition =
-        titleRef.current.getBoundingClientRect().top + window.scrollY;
-
-      if (
-        window.scrollY + window.innerHeight >= titlePosition ||
-        window.scrollY >= titlePosition
-      ) {
-        titleRef.current.classList.add("visible");
-        catalogueCard.current.classList.add("visible");
-        viewMore.current.classList.add("visible");
-
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <section className="home-catalogue-section">
-      <h2 ref={titleRef} className="section-title">
-        Explore Our Exclusive 2024 Product Lineup
-      </h2>
+      <SectionTitle title={"Explore Our Exclusive Product Lineup"} />
       <div className="home-catalogue">
-        <div ref={catalogueCard} className="catalogue-card">
-          <Image src={""} alt="" height={500} width={500} />
-          <h3>Title</h3>
+        <div className="catalogue-col">
+          <CatalogueCard cardTitle={"Folders"} cardImg={cc7} />
+          <CatalogueCard cardTitle={"Gifting Sets"} cardImg={cc5} />
+        </div>
+        <div className="catalogue-col">
+          <CatalogueCard cardTitle={"Duffel Bags"} cardImg={cc2} />
+          <CatalogueCard cardTitle={"Office Bags"} cardImg={cc6} />
+        </div>
+        <div className="catalogue-col">
+          <CatalogueCard cardTitle={"Belts"} cardImg={cc3} />
+          <CatalogueCard cardTitle={"Wallets"} cardImg={cc1} />
+          <CatalogueCard cardTitle={"Ladies Bag"} cardImg={cc9} />
+        </div>
+        <div className="catalogue-col">
+          <CatalogueCard cardTitle={"BackPacks"} cardImg={cc4} />
+          <CatalogueCard cardTitle={"Travel Bags"} cardImg={cc8} />
         </div>
       </div>
-      <div ref={viewMore} className="catalogue-redirect">
-        <Link href="/">Explore Further</Link>
-      </div>
+      <ViewMore text={"Explore Further"} link={"/"} />
     </section>
   );
 }

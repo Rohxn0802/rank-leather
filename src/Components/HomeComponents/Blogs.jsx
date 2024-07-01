@@ -1,25 +1,21 @@
 "use client";
-import Link from "next/link";
 import { useRef, useEffect } from "react";
+import SectionTitle from "../Common/SectionTitle";
+import ViewMore from "../Common/ViewMore";
 
 function Blogs() {
-  const titleRef = useRef(null);
   const blogCard = useRef(null);
-  const viewMore = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const titlePosition =
-        titleRef.current.getBoundingClientRect().top + window.scrollY;
+      const cardPosition =
+        blogCard.current.getBoundingClientRect().top + window.scrollY;
 
       if (
-        window.scrollY + window.innerHeight >= titlePosition ||
-        window.scrollY >= titlePosition
+        window.scrollY + window.innerHeight >= cardPosition ||
+        window.scrollY >= cardPosition
       ) {
-        titleRef.current.classList.add("visible");
         blogCard.current.classList.add("visible");
-        viewMore.current.classList.add("visible");
-
         window.removeEventListener("scroll", handleScroll);
       }
     };
@@ -31,9 +27,7 @@ function Blogs() {
   }, []);
   return (
     <section className="home-blogs-section">
-      <h2 ref={titleRef} className="section-title">
-        Insights & Stories
-      </h2>
+      <SectionTitle title={"Insights & Stories"} />
       <div className="home-blogs">
         <div ref={blogCard} className="blog-card">
           <div className="blog-image">
@@ -42,9 +36,7 @@ function Blogs() {
           <h3>Title</h3>
         </div>
       </div>
-      <div ref={viewMore} className="blogs-redirect">
-        <Link href="/blogs">More to Explore</Link>
-      </div>
+      <ViewMore text={"More to Explore"} link={"/blogs"} />
     </section>
   );
 }

@@ -12,10 +12,18 @@ function Header() {
       </div>
       <div className="h-block-two">
         <ul>
-          <li>BLOGS</li>
-          <li>CATALOGUE</li>
-          <li>ABOUT US</li>
-          <li>CONTACT US</li>
+          <li>
+            <Link href="/blogs">Blogs</Link>
+          </li>
+          <li>
+            <Link href="/">Catalogue</Link>
+          </li>
+          <li>
+            <Link href="/">About Us</Link>
+          </li>
+          <li>
+            <Link href="/">Contact Us</Link>
+          </li>
         </ul>
       </div>
     </header>

@@ -1,29 +1,26 @@
 "use client";
 import Link from "next/link";
 import { useRef, useEffect } from "react";
+import SectionTitle from "../Common/SectionTitle";
 
 function OurWebsites() {
-  const titleRef = useRef(null);
+  const postionRef = useRef(null);
   const bullriderRef = useRef(null);
   const agRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const titlePosition =
-        titleRef.current.getBoundingClientRect().top + window.scrollY;
+      const Position =
+        postionRef.current.getBoundingClientRect().top + window.scrollY;
 
       if (
-        window.scrollY + window.innerHeight >= titlePosition ||
-        window.scrollY >= titlePosition
+        window.scrollY + window.innerHeight >= Position ||
+        window.scrollY >= Position
       ) {
-        titleRef.current.classList.add("visible");
         bullriderRef.current.classList.add("visible");
         agRef.current.classList.add("visible");
         window.removeEventListener("scroll", handleScroll);
-
       }
-
-    
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,10 +31,8 @@ function OurWebsites() {
 
   return (
     <section className="our-websites-section">
-      <h2 ref={titleRef} className="section-title">
-        Our Online Presence
-      </h2>
-      <div className="our-websites-wrap">
+      <SectionTitle title={"Our Online Presence"} />
+      <div ref={postionRef} className="our-websites-wrap">
         <div ref={bullriderRef} className="bullrider">
           <div className="bullrider-desc">
             <h2>BULL RIDER INDIA</h2>

@@ -1,12 +1,154 @@
 const catalogueProducts = [
     {
         categoryId: 1,
-        categoryName: "Office/Laptop Bags",
+        categoryName: "office-bags",
         categoryImages: {
-            image1: ""
-        }
+            image1: "../../Assets/img/catalogue/officeBag1.png",
+            image2: "../../Assets/img/catalogue/officeBag2.png",
+            image3: "../../Assets/img/catalogue/officeBag3.png",
+            image4: "../../Assets/img/catalogue/officeBag4.png",
+            image5: "../../Assets/img/catalogue/officeBag5.png",
+            image6: "../../Assets/img/catalogue/officeBag6.png",
+            image7: "../../Assets/img/catalogue/officeBag7.png",
+            image8: "../../Assets/img/catalogue/officeBag8.png",
+            image9: "../../Assets/img/catalogue/officeBag9.png",
+        },
     },
-
+    {
+        categoryId: 2,
+        categoryName: "backpacks",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/backpack1.png",
+            image2: "../../Assets/img/catalogue/backpack2.png",
+            image3: "../../Assets/img/catalogue/backpack3.png",
+            image4: "../../Assets/img/catalogue/backpack4.png",
+            image5: "../../Assets/img/catalogue/backpack5.png",
+            image6: "../../Assets/img/catalogue/backpack6.png",
+        },
+    },
+    {
+        categoryId: 3,
+        categoryName: "belts",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/belt1.png",
+            image2: "../../Assets/img/catalogue/belt2.png",
+        },
+    },
+    {
+        categoryId: 4,
+        categoryName: "duffel-bags",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/db1.png",
+            image2: "../../Assets/img/catalogue/db2.png",
+        },
+    },
+    {
+        categoryId: 5,
+        categoryName: "diary",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/diary1.png",
+            image2: "../../Assets/img/catalogue/diary2.png",
+            image3: "../../Assets/img/catalogue/diary3.png",
+            image4: "../../Assets/img/catalogue/diary4.png",
+            image5: "../../Assets/img/catalogue/diary5.png",
+            image6: "../../Assets/img/catalogue/diary6.png",
+        },
+    },
+    {
+        categoryId: 6,
+        categoryName: "folder",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/folder1.png",
+            image2: "../../Assets/img/catalogue/folder2.png",
+            image3: "../../Assets/img/catalogue/folder3.png",
+            image4: "../../Assets/img/catalogue/folder4.png",
+            image5: "../../Assets/img/catalogue/folder5.png",
+            image6: "../../Assets/img/catalogue/folder6.png",
+        },
+    },
+    {
+        categoryId: 7,
+        categoryName: "gifting-sets",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/gs1.png",
+            image2: "../../Assets/img/catalogue/gs2.png",
+            image3: "../../Assets/img/catalogue/gs3.png",
+            image4: "../../Assets/img/catalogue/gs4.png",
+            image5: "../../Assets/img/catalogue/gs5.png",
+            image6: "../../Assets/img/catalogue/gs6.png",
+            image7: "../../Assets/img/catalogue/gs7.png",
+        },
+    },
+    {
+        categoryId: 8,
+        categoryName: "ladies-bag",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/lb1.png",
+            image2: "../../Assets/img/catalogue/lb2.png",
+            image3: "../../Assets/img/catalogue/lb3.png",
+            image4: "../../Assets/img/catalogue/lb4.png",
+        },
+    },
+    {
+        categoryId: 9,
+        categoryName: "other-works",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/ow1.png",
+            image2: "../../Assets/img/catalogue/ow2.png",
+            image3: "../../Assets/img/catalogue/ow3.png",
+            image4: "../../Assets/img/catalogue/ow4.png",
+            image5: "../../Assets/img/catalogue/ow5.png",
+            image6: "../../Assets/img/catalogue/ow6.png",
+            image7: "../../Assets/img/catalogue/ow7.png",
+            image8: "../../Assets/img/catalogue/ow8.png",
+            image9: "../../Assets/img/catalogue/ow9.png",
+            image10: "../../Assets/img/catalogue/ow10.png",
+            image11: "../../Assets/img/catalogue/ow11.png",
+            image12: "../../Assets/img/catalogue/ow12.png",
+            image13: "../../Assets/img/catalogue/ow13.png",
+            image14: "../../Assets/img/catalogue/ow14.png",
+            image15: "../../Assets/img/catalogue/ow15.png",
+            image16: "../../Assets/img/catalogue/ow16.png",
+            image17: "../../Assets/img/catalogue/ow17.png",
+            image18: "../../Assets/img/catalogue/ow18.png",
+            image19: "../../Assets/img/catalogue/ow19.png",
+            image20: "../../Assets/img/catalogue/ow20.png",
+            image21: "../../Assets/img/catalogue/ow21.png",
+            image22: "../../Assets/img/catalogue/ow22.png",
+        },
+    },
+    {
+        categoryId: 10,
+        categoryName: "passport-cover",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/pc1.png",
+            image2: "../../Assets/img/catalogue/pc2.png",
+            image3: "../../Assets/img/catalogue/pc3.png",
+            image4: "../../Assets/img/catalogue/pc4.png",
+        },
+    },
+    {
+        categoryId: 11,
+        categoryName: "trolley-bag",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/tb1.png",
+            image2: "../../Assets/img/catalogue/tb2.png",
+            image3: "../../Assets/img/catalogue/tb3.png",
+            image4: "../../Assets/img/catalogue/tb4.png",
+        },
+    },
+    {
+        categoryId: 12,
+        categoryName: "wallet",
+        categoryImages: {
+            image1: "../../Assets/img/catalogue/wallet1.png",
+            image2: "../../Assets/img/catalogue/wallet2.png",
+            image3: "../../Assets/img/catalogue/wallet3.png",
+            image4: "../../Assets/img/catalogue/wallet4.png",
+            image5: "../../Assets/img/catalogue/wallet5.png",
+            image6: "../../Assets/img/catalogue/wallet6.png",
+        },
+    },
 ];
 
 export default catalogueProducts;

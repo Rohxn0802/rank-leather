@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
@@ -35,7 +35,7 @@ function Footer() {
     <footer>
       <div ref={footerLine} className="footer-line"></div>
 
-      <div  className="footer-flex">
+      <div className="footer-flex">
         <div className="footer-img">
           <div className="footer-logo">
             <Image src={logo} height={500} width={500} alt="Rank" />
@@ -49,15 +49,29 @@ function Footer() {
           <div className="footer-address">
             RANK, Laxmibai Dharmaji Pol Chawl, Opp. Kala Killa BMC School, Sant
             Rohidas Marg, Dharavi, Mumbai - 400017
+            <br />
+            +919869184901 | +919619184901
           </div>
           <div className="social-icons">
-            <Link href={"https://wa.me/c/919619184901"} target="_blank" className="whatsapp-logo">
+            <Link
+              href={"https://wa.me/c/919619184901"}
+              target="_blank"
+              className="whatsapp-logo"
+            >
               <FaWhatsapp />
             </Link>
-            <Link href={"https://www.facebook.com/profile.php?id=100063776868374"} target="_blank" className="facebook-logo">
+            <Link
+              href={"https://www.facebook.com/profile.php?id=100063776868374"}
+              target="_blank"
+              className="facebook-logo"
+            >
               <FaFacebook />
             </Link>
-            <Link href={"https://www.instagram.com/rank.manufacturing/"} target="_blank" className="instagram-logo">
+            <Link
+              href={"https://www.instagram.com/rank.manufacturing/"}
+              target="_blank"
+              className="instagram-logo"
+            >
               <FaInstagram />
             </Link>
             <Link href={"/"} target="_blank" className="email-logo">
