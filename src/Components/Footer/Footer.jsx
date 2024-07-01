@@ -51,16 +51,16 @@ function Footer() {
             Rohidas Marg, Dharavi, Mumbai - 400017
           </div>
           <div className="social-icons">
-            <Link href={"/"} className="whatsapp-logo">
+            <Link href={"https://wa.me/c/919619184901"} target="_blank" className="whatsapp-logo">
               <FaWhatsapp />
             </Link>
-            <Link href={"/"} className="facebook-logo">
+            <Link href={"https://www.facebook.com/profile.php?id=100063776868374"} target="_blank" className="facebook-logo">
               <FaFacebook />
             </Link>
-            <Link href={"/"} className="instagram-logo">
+            <Link href={"https://www.instagram.com/rank.manufacturing/"} target="_blank" className="instagram-logo">
               <FaInstagram />
             </Link>
-            <Link href={"/"} className="email-logo">
+            <Link href={"/"} target="_blank" className="email-logo">
               <TfiEmail />
             </Link>
           </div>

@@ -84,10 +84,10 @@ header .h-block-one a img {
 }
 header .h-block-two ul {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 header .h-block-two ul li {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: black;
   transition: all 0.3s linear;
   cursor: pointer;
@@ -97,15 +97,15 @@ header .h-block-two ul li:after {
   display: block;
   height: 0.1rem;
   width: 0;
-  background-color: #0094d9;
+  background-color: gray;
   transition: all 0.3s linear;
 }
 header .h-block-two ul li:hover {
-  color: #0094d9;
+  color: gray;
 }
 header .h-block-two ul li:hover:after {
   width: 100%;
-  background-color: #0094d9;
+  background-color: gray;
 }
 
 footer {
@@ -558,5 +558,75 @@ footer .footer-flex .footer-info .copyright {
   transition: all 0.3s ease;
 }
 .home-blogs-section .blogs-redirect a:hover::after {
+  width: 100%;
+}
+
+.home-catalogue-section {
+  padding-top: 2rem;
+}
+.home-catalogue-section .section-title {
+  text-align: center;
+  font-size: 6rem;
+  border-bottom: 1px solid black;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+}
+.home-catalogue-section .section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.home-catalogue-section .home-catalogue {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-catalogue-section .home-catalogue .catalogue-card {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+}
+.home-catalogue-section .home-catalogue .catalogue-card.visible {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+.home-catalogue-section .home-catalogue .catalogue-card h3 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+}
+.home-catalogue-section .catalogue-redirect {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+}
+.home-catalogue-section .catalogue-redirect.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.home-catalogue-section .catalogue-redirect a {
+  font-size: 4rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home-catalogue-section .catalogue-redirect a::after {
+  display: block;
+  content: "";
+  height: 1px;
+  background-color: black;
+  width: 0;
+  transition: all 0.3s ease;
+}
+.home-catalogue-section .catalogue-redirect a:hover::after {
   width: 100%;
 }/*# sourceMappingURL=main.css.map */

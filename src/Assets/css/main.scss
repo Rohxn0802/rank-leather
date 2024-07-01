@@ -80,9 +80,9 @@ header {
   .h-block-two {
     ul {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
       li {
-        font-size: 1.8rem;
+        font-size: 2rem;
         color: black;
         transition: all 0.3s linear;
         cursor: pointer;
@@ -91,14 +91,14 @@ header {
           display: block;
           height: 0.1rem;
           width: 0;
-          background-color: #0094d9;
+          background-color: gray;
           transition: all 0.3s linear;
         }
         &:hover {
-          color: #0094d9;
+          color: gray;
           &:after {
             width: 100%;
-            background-color: #0094d9;
+            background-color: gray;
           }
         }
       }
@@ -543,6 +543,77 @@ footer {
     }
   }
   .blogs-redirect {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    a {
+      font-size: 4rem;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: fit-content;
+      &::after {
+        display: block;
+        content: "";
+        height: 1px;
+        background-color: black;
+        width: 0;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.home-catalogue-section {
+  padding-top: 2rem;
+  .section-title {
+    text-align: center;
+    font-size: 6rem;
+    border-bottom: 1px solid black;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .home-catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    .catalogue-card {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+      padding: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease-in-out;
+      &.visible {
+        transition: all 1s ease-in-out;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      h3 {
+        font-size: 4rem;
+        font-weight: 500;
+        color: black;
+        text-align: center;
+      }
+    }
+  }
+  .catalogue-redirect {
     text-align: center;
     opacity: 0;
     transform: translateY(20px);

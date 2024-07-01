@@ -37,13 +37,13 @@ function Blogs() {
       <div className="home-blogs">
         <div ref={blogCard} className="blog-card">
           <div className="blog-image">
-            <button>Read More</button>
+            <button>Continue Reading</button>
           </div>
           <h3>Title</h3>
         </div>
       </div>
       <div ref={viewMore} className="blogs-redirect">
-        <Link href="/blogs">View More</Link>
+        <Link href="/blogs">More to Explore</Link>
       </div>
     </section>
   );
